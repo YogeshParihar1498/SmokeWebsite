@@ -408,3 +408,50 @@ color:crimson;
    justify-content: space-around;
     background-color:lightgrey;
 }
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.photos img{
+    height: 100%;
+    width: 100%;
+}
+.decs h5{
+    color:yellowgreen;
+    font-size: large;
+}
+.addtocart button {
+    height: 70px;
+    width: 200px;
+    font-size: 25px;
+    font-weight: 3em;
+    background-color:yellowgreen;
+    
+    border: none;
+    border-radius: 20px;
+}
+.addtocart button:hover{
+  background-color:antiquewhite;
+    
+    
+}
+.addtocart button a{
+    color:black;
+}
+.flfoot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vpfoot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vpfoot img{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
