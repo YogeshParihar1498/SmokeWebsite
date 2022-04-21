@@ -240,6 +240,29 @@ font-weight: 500;
     display: flex;
     animation: fade 0.5s;
 }
+.result , .result-active{
+    display: flex;
+}
+.login-form form a{
+    display:flex;
+    text-align:center;
+    justify-content: center;
+    width:70px;
+    font-weight:1rem;
+    background-color: #0b9d8a;
+    color:black;
+    border-radius:5px;
+}
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:5%;
+    width:40%;
+    background-color: #272727;
+    color:white;
+}
+
 @keyframes fade {
     0%{
         opacity: 0;
@@ -421,10 +444,10 @@ color:crimson;
     color:yellowgreen;
     font-size: large;
 }
-.addtocart button {
-    height: 70px;
+/* .addtocart a {
+    height: 80px;
     width: 200px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 3em;
     background-color:yellowgreen;
     
@@ -436,9 +459,16 @@ color:crimson;
     
     
 }
-.addtocart button a{
+.addtocart  a{
     color:black;
+} */
+
+.addtocart a {
+
+  background-color: yellowgreen; 
+  border-radius: 5px;
 }
+
 .flfoot {
     display: flex;
     align-items: center;
@@ -454,4 +484,77 @@ color:crimson;
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+}
+.foot h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #272727;
+}
+
+/*----------------------------------CART PAGE-------------------------------- */
+.product-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.product-container i{
+    font: size 25px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+
+.product-title{
+    width: 45%;
+}
+.price{
+    width: 15%;
+    
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 30%;
+    /* border-bottom: 1px solid lightgray; */
+    display: flex;
+    align-items: center;
+}
+ .total{
+    width: 10%;
+    /* border-bottom: 1px solid lightgray; */
+    display: flex;
+    align-items: center;
+ }
+ .product img{
+     width: 150px;
+ }
+ .product{
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     
+     padding: 10px 0;
+     /* border-bottom:  1px solid lightgray; */
+
+ }
+ .basketTotalContainer{
+     display:flex;
+     justify-content: flex-end;
+     width: 100%;
+     padding: 10px 0;
+ }
+ .basketTotalTittle{
+     width:30%;
+ }
+.basketTotal{
+    width:10%;
 }

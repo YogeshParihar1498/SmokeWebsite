@@ -48,10 +48,10 @@
                 <i class="fa fa-user"></i>
             </a>
             <!--cart-icom-->
-            <a href="#">
+            <a class="cart" href="#">
                 <i class="fa fa-shopping-cart">
                 <!---number of items-->
-                <span class="num-cart-product">0</span>
+                <span >0</span>
             </i>
             </a>
         </div>
@@ -133,7 +133,7 @@
             <div class="addtocart">
                 <p>$35/1 gm</p>
                 <p>In Stock -10</p>
-                <button class="adtcrt"><a href="">Add To Cart</a></button>
+                <a class="add-cart cart1" href="">Add To Cart</a>
             </div>
         </div>
              <div class="items">
@@ -150,7 +150,7 @@
           <div class="addtocart">
               <p>$30/1 gm</p>
               <p>In Stock -10</p>
-              <button class="adtcrt"><a href="">Add To Cart</a></button>
+              <a class="add-cart cart1" href="">Add To Cart</a>
           </div>
         </div>
           <div class="items">
@@ -167,7 +167,7 @@
             <div class="addtocart">
                 <p>$30/1 gm</p>
                 <p>In Stock -10</p>
-                <button class="adtcrt"><a href="">Add To Cart</a></button>
+                <a class="add-cart cart1" href="">Add To Cart</a>
             </div>    
         </div>
             <div class="items">
@@ -184,7 +184,7 @@
                 <div class="addtocart">
                     <p>$30/1 gm</p>
                     <p>In Stock -10</p>
-                    <button class="adtcrt"><a href="">Add To Cart</a></button>
+                    <a class="add-cart cart1" href="">Add To Cart</a>
                 </div>
             </div>
     </div>
@@ -230,5 +230,63 @@
            </div>
        </li>
     </ul>
+     <!---Script -->
+    
+    <!--JQuery-->
+    <script src="js/JQuery.js"></script>
+    <!---Script-->
+    <script type="text/javascript">
+        /*for search bar*/
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+     /*for login-signup*/
+     $(document).on('click','.user,.already-account',function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+    $(document).on('click','.sign-up-btn',function(){
+        $('.form').addClass('sign-up-active').removeClass('login-active')
+    });
+    $(document).on('click','.form-cancel',function(){
+        $('.form').removeClass('login-active').removeClass('sign-up-active')
+    });
+    $(document).on('click','.btn1',function(){
+        $('.form').addClass('result-active').removeClass('login-active')
+    });
+   
+    var available_user_name = Array("bake40sky@gmail.com","nerds@gmail.com","high@gmail.com"),
+available_user_pass = Array("1001","2002","3003");
+
+
+for (var i = 0; i < available_user_name.length; i++) {
+var user_names = available_user_name[i];
+var user_passws = available_user_pass[i];
+
+
+$("#btn").click (function (){
+var user_name = $("#user_name").val(),
+user_pass = $("#user_pass").val(),
+btn = $("#btn"),
+result = $("#result");
+
+if($.inArray(user_name, available_user_name) >= 0){
+  if(available_user_name.indexOf(user_name) == available_user_pass.indexOf(user_pass)){
+    result.html("You're welcome : "+ user_name);
+   
+  }else{
+    result.html("You're selected wrong password for username, please try again");
+    
+  }
+}else{
+    result.html("This name doesn't registred with us");
+    
+}
+});}
+</script>
+    <script src="main.js"></script>
 </body>
 </html>

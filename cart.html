@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!----navigation--------->
-    <nav>
+     <!----navigation--------->
+     <nav>
         <!---social-link - and -phone-number-->
            <div class="social-call">
                <div class="social">
@@ -114,130 +114,20 @@
             </div>
         </div>
     </div>
-    <!-----------------Products-->
-    <div class="Category-heading">
-        <h2> Sativa</h2>
-      </div>
-      <div class="items">
-          <div class="photos">
-              <img src="Photos/prod1.png" alt="">
-          </div>
-          <div class="decs">
-          <h5>Twd. Blue Dream</h5>
-          <p>Twd.28 Blue Dream is a sativa-dominant hybrid strain.Makes you relax <br>Its buds are complemented by an orange hue and a complex aroma. <br>
-            Some associate skunky,loral and sweet flavours with the Twd.28 Blue Dream strain. </p>
-          <p>THC 15% -21 %</p>
-          <p>CBD 0% - 0.1%</p>
+   
+    <div class="product-container">
+        <div class="product-header">
+            <h5 class="product-title">PRODUCT</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
         </div>
-          <div class="addtocart">
-              <p>$30/3.5 gm</p>
-              <p>In Stock -<span>10</span></p>
-              <a class="add-cart cart1" href="">Add To Cart</a>
-          </div>
-         
-          
-      </div>
-      <div class="items">
-        <div class="photos">
-            <img src="Photos/prod2.png" alt="">
+        <div class="products">
+
         </div>
-        <div class="decs">
-            <h5>Legend Sativa Blend</h5>
-            <p>LEGEND whole flower is packaged as 28g for more to go around. <br>his blend of Sativa-dominant strains makes a great assortment for any occasion. <br>
-                A mixture of intense flavours and aromas arise. </p>
-            <p>THC 15% -19 %</p>
-            <p>CBD 0% - 1%</p>
-          </div>
-            <div class="addtocart">
-                <p>$35/3.5 gm</p>
-                <p >In Stock -<span>10</span></p>
-                <a class="add-cart cart2" href="">Add To Cart</a>
-            </div>
-       
-        
     </div>
 
-      <div class="Category-heading">
-        <h2> Indica</h2>
-      </div>
-      <div class="items">
-        <div class="photos">
-            <img src="Photos/prod21.png" alt="">
-        </div>
-        <div class="decs">
-        <h5>Haven St. No. 427 Retrograde</h5>
-        <p>When planets collide. When Garlic Cookies meets OZ Kush. <br> A legend like no other is born. Pungent, sharp, spicy. <br>
-            With light green buds coated in glistening trichomes. </p>
-        <p>THC 25% -29 %</p>
-        <p>CBD 1%</p>
-      </div>
-        <div class="addtocart">
-            <p>$31/3.5 gm</p>
-            <p >In Stock -<span id="btt">10</span></p>
-            <a class="add-cart cart3" href="">Add To Cart</a>
-        </div>
-       
-        
-    </div>
-    <div class="items">
-      <div class="photos">
-          <img src="Photos/prod22.png" alt="">
-      </div>
-      <div class="decs">
-          <h5>Palmetto Nuken</h5>
-          <p>A very potent indica-hybrid that can reach THC levels over 20%, <br>Nuken's terp profile is sweet with fat and dense buds. <br> </p>
-          <p>THC 15% -25 %</p>
-          <p>CBD 1%</p>
-        </div>
-          <div class="addtocart">
-              <p>$33/3.5 gm</p>
-              <p >In Stock -<span >10</span></p>
-              <a class="add-cart cart4" href="">Add To Cart</a>
-          </div>
-     
-      
-  </div>
-  <!----Flowe Image-->
-  <div class="flfoot">
-      <img src="Photos/flowerfoot.png" alt="">
-  </div>
-     <!---Footer-->
-
-     <ul class="foot">
-        <li>
-            <div>
-            <h3>Founders</h3>
-            <p>Dhanush</p>
-            <p>Marcelo</p>
-            <p>Hosne</p>
-            <p>Yogesh</p>
-           </div>
-        </li>
-        <li>
-            <div>
-            <h3>Contact Us</h3>
-            <p>Adress</p>
-            <p>Email</p>
-            <p>Phone</p>
-            <p>Social</p>
-           </div>
-        </li>
-        <li>
-            <div>
-           <h3>Keep in Touch</h3>
-           <p>Questions</p>
-           <p>FAQ</p>
-           <p>General Informartio</p>
-           <p>Deatils</p>
-           </div>
-       </li>
-       <li>
-           <div>
-           <p>&copy 2022 Nerd's Smoke Shop</p>
-           </div>
-       </li>
-    </ul>
-     <!---Script -->
+ <!---Script -->
     
     <!--JQuery-->
     <script src="js/JQuery.js"></script>
@@ -265,7 +155,7 @@
         $('.form').addClass('result-active').removeClass('login-active')
     });
    
-    var available_user_name = Array("bake40sky@gmail.com","nerds@gmail.com","high@gmail.com"),
+    var available_user_name = Array("Alaa@gmail.com","Hali","Abdo"),
 available_user_pass = Array("1001","2002","3003");
 
 
@@ -294,15 +184,7 @@ if($.inArray(user_name, available_user_name) >= 0){
 }
 });}
 </script>
-<!-- <script>
-    var i = 10;
-    function btt() {
-     
-        document.getElementById('#btt').value = --i;
-    }
-    btt();
-</script> -->
-  <script src="main.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>
-

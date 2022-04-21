@@ -8,9 +8,10 @@
     <title>SmokesShop</title>
    
     
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-c2ac099f-607b-41a4-b9f7-1a52d5f00384"></div>
     
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
@@ -48,6 +49,9 @@
             <li><a href="vapes.html">Vapes</a></li>
             <li><a href="accs.html">Accessories</a></li>
             
+          
+
+            
         </ul>
         <!----right menu-->
         <div class="right-menu">
@@ -60,16 +64,16 @@
                 <i class="fa fa-user"></i>
             </a>
             <!--cart-icom-->
-            <a href="#">
+            <a  class="cart" href="cart.html">
                 <i class="fa fa-shopping-cart">
                 <!---number of items-->
-                <span class="num-cart-product">0</span>
+                <span>0</span>
             </i>
             </a>
         </div>
 
     </div>
-
+    
     </nav>
     <!--search-bar-->
     <div class="search-bar">
@@ -95,11 +99,14 @@
                 <i class="fa fa-times"></i>
             </div>
             <strong>Log IN</strong>
-            <form >
-                <input type="email" placeholder="Example@gmail.com" name="email">
-                <input type="password" placeholder="Password" name="password">
+            <form  >
+                <input type="email" placeholder="Example@gmail.com" name="email" id="user_name">
+                <input type="password" placeholder="Password" name="password" id ="user_pass">
                 <!--submit -->
-                <input type="submit" value="Log IN">
+                <a href="#" type="submit" value="Log IN" id="btn" class="'btn1">Login </a>
+                
+                
+                
             </form>
             <div class="form-btns">
                 <a href="#" class="forget">Forget Your Password</a>
@@ -119,14 +126,17 @@
                 <input type="password" placeholder="Password" name="password" required>
                 <!--submit -->
                 <input type="submit" value="Sign Up">
+               
             </form>
             <div class="form-btns">
                 <a href="#" class="already-account">Already Have an Account?</a>
                
             </div>
         </div>
+        <div class="result" id="result"> </div>
+        
     </div>
-
+   
     <!---------------Full Page Sliders--------->
     <ul id="adaptive" class="cs-hidden">
         <!--Box-1---------->
@@ -260,10 +270,11 @@
          <li>
              <div>
              <h3>Founders</h3>
-             <p>Dhanush</p>
-             <p>Marcelo</p>
-             <p>Hosne</p>
-             <p>Yogesh</p>
+            <p> <a href=""><i class="fa fa-linkedin"></i> Dhanush </a></p>
+            <p><a href=""><i class="fa fa-linkedin"></i> Marcelo </a></p>
+            <p><a href=""><i class="fa fa-linkedin"></i> Hosne </a></p>
+            <p><a href=""><i class="fa fa-linkedin"></i> Yogesh </a></p>
+             
             </div>
          </li>
          <li>
@@ -291,7 +302,8 @@
         </li>
      </ul>
 
-
+    <!---Script -->
+    
     <!--JQuery-->
     <script src="js/JQuery.js"></script>
     <!---Script-->
@@ -314,20 +326,53 @@
     $(document).on('click','.form-cancel',function(){
         $('.form').removeClass('login-active').removeClass('sign-up-active')
     });
+    $(document).on('click','.btn1',function(){
+        $('.form').addClass('result-active').removeClass('login-active')
+    });
+   
+    var available_user_name = Array("bake40sky@gmail.com","nerds@gmail.com","high@gmail.com"),
+available_user_pass = Array("1001","2002","3003");
+
+
+for (var i = 0; i < available_user_name.length; i++) {
+var user_names = available_user_name[i];
+var user_passws = available_user_pass[i];
+
+
+$("#btn").click (function (){
+var user_name = $("#user_name").val(),
+user_pass = $("#user_pass").val(),
+btn = $("#btn"),
+result = $("#result");
+
+if($.inArray(user_name, available_user_name) >= 0){
+  if(available_user_name.indexOf(user_name) == available_user_pass.indexOf(user_pass)){
+    result.html("You're welcome : "+ user_name);
+   
+  }else{
+    result.html("You're selected wrong password for username, please try again");
+    
+  }
+}else{
+    result.html("This name doesn't registred with us");
+    
+}
+});}
 
 
     /*SLideerr j query */
 
-    $(document).ready(function() {
-    $('#adaptive').lightSlider({
-        adaptiveHeight:true,
-        item:1,
-        slideMargin:0,
-        loop:true
-    });
-});
+//     $(document).ready(function() {
+//     $('#adaptive').lightSlider({
+//         adaptiveHeight:true,
+//         item:1,
+//         slideMargin:0,
+//         loop:true
+//     });
+// });
     
    
-    </script>
+</script>
+    <script src="main.js"></script>
 </body>
 </html>
